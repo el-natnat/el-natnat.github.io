@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Responsive -->
+	<meta charset="utf-8">
+	<meta 1name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<meta rel="stylesheet" media="screen and (max-width: 1280px)" href="petiteResolution.css" />
+	<!-- Title -->
+	<title id="titre">TP du 1/02</title>
+</head>
+
+
+<body>
+	<h1> JavaScript </h1>
+
+    <canvas id="caneva" style="border: 1px solid #0000ff" >
+
+    
+    </canvas>
+
+
+
+
+
+    <script>
+            
+            document.addEventListener("DOMContentLoaded",start);
+
+            const event = new Event('bang');
+            //Propriétés du canevas
+            const canvasWidth = 600;
+            const canvasHeight = 600;
+        
+            var context = caneva.getContext('2d');
+            var canvas = document.getElementById("caneva");
+
+            //Propriétés du rectangle
+            let posX =0;
+            let posY =550;
+            let widthSquare=50;
+            let heightSquare=50;
+
+            let vitesse = 10; //10pixels par 1/10s
+
+            let intervalId;
+
+        
+
+            canvas.setAttribute("width",canvasWidth);
+            canvas.setAttribute("height",canvasHeight);
+
+            context.fillStyle = 'rgb(255,0,0)';
+
+            document.getElementById('titre');
+            
+
+            function start(){
+                
+                context.fillRect(posX,posY,widthSquare,heightSquare); //Position départ
+                intervalId = window.setInterval(gameLoop,100);
+
+      
+            }
+            function gameLoop(){
+                clearSquare();
+                updateSquare();
+                drawSquare();
+                
+            }
+
+            function clearSquare(){
+                context.clearRect(posX-10,posY,widthSquare,heightSquare);
+            }
+
+            function updateSquare(){
+                if (posX + 10> canvasWidth ){
+                    endgame();
+                }
+
+                else {
+                    posX = posX + 10;
+                }
+            }
+
+            function endgame(){
+                
+                window.clearInterval(intervalId);
+            }
+        
+            function drawSquare(){
+                context.fillRect(posX,posY,widthSquare,heightSquare);
+            }
+            
+        
+
+    </script>
+</body>
+
+
+</html>

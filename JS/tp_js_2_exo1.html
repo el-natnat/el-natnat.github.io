@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Responsive -->
+	<meta charset="utf-8">
+	<meta 1name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<meta rel="stylesheet" media="screen and (max-width: 1280px)" href="petiteResolution.css" />
+	<!-- Title -->
+	<title>JS_TP_2</title>
+</head>
+
+
+<body>
+	<h1> JavaScript </h1>
+
+    <div id="timer"> 
+            
+    </div>
+    
+
+
+
+
+
+    <script>
+
+        
+        var temps = 10;
+        const timerElement = document.getElementById("timer"); //Pour récupérer l'ID de timer
+        timerElement.innerText = temps; //Afficher le timer 
+
+
+        function decrementer() {
+            timerElement.innerText = temps;
+            temps--;   
+            if (temps ==-1){
+                clearInterval(retour);
+            }       
+        
+        }
+        let retour = setInterval(decrementer,1000);
+        
+
+    </script>
+</body>
+
+
+</html>

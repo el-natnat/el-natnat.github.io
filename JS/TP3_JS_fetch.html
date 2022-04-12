@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Responsive -->
+	<meta charset="utf-8">
+	<meta 1name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<meta rel="stylesheet" media="screen and (max-width: 1280px)" href="petiteResolution.css" />
+	<!-- Title -->
+	<title id="titre">TP Fetch du 2/02</title>
+    
+</head>
+
+
+<body>
+	<h1> TP3 </h1>
+
+    <canvas id="canevas"> </canvas>
+
+
+
+
+
+
+    <script>
+
+        let x;
+        let y;
+        let resp;
+
+
+        fetch('https://stwom.herokuapp.com/100')
+        
+            .then((resp)=>resp.json()) 
+            
+            .then(function(data) {
+                console.log(resp);
+            })
+        
+        
+
+
+
+
+    </script>
+</body>
+
+
+</html>

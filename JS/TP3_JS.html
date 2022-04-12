@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Responsive -->
+	<meta charset="utf-8">
+	<meta 1name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<meta rel="stylesheet" media="screen and (max-width: 1280px)" href="petiteResolution.css" />
+	<!-- Title -->
+	<title id="titre">TP du 1/02</title>
+</head>
+
+
+<body>
+	<h1> TP3 </h1>
+
+    <canvas id="canevas"> </canvas>
+
+
+
+
+
+
+    <script>
+
+        let x;
+        let y;
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', "https://stwom.herokuapp.com/100");
+
+        xhr.onload= ()=> console.log(`hello ${xhr.responseText}`);
+        xhr.send();
+        console.log(xhr);
+
+        /*fetch('https://stwom.herokuapp.com/')
+        
+            .then(function(response) {
+                x=response.text
+                console.log(x)
+
+            })
+        
+        */
+
+
+
+
+    </script>
+</body>
+
+
+</html>
